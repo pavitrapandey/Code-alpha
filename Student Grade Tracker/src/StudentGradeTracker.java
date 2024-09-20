@@ -331,7 +331,7 @@ public class StudentGradeTracker {
         }
     }
 
-    private static void clearInputFields() {
+    public static void clearInputFields() {
         nameField.setText("");
         mathsField.setText("");
         physicsField.setText("");
@@ -339,8 +339,7 @@ public class StudentGradeTracker {
         englishField.setText("");
         hindiField.setText("");
     }
-
-    private static boolean isDuplicateStudent(String name) {
+    public static boolean isDuplicateStudent(String name) {
         for (Student student : st) {
             if (student.getName().equalsIgnoreCase(name)) {
                 return true;
@@ -349,7 +348,7 @@ public class StudentGradeTracker {
         return false;
     }
 
-    private static void refreshStudentTable() {
+    public static void refreshStudentTable() {
         tModel.setRowCount(0);
         for (Student student : st) {
             tModel.addRow(student.toTableRow());
